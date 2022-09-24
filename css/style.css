@@ -227,6 +227,7 @@ header h1 span:nth-child(2) {
   display: flex;
   justify-content: space-around;
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 .surname__filter:focus,
@@ -437,15 +438,17 @@ header h1 span:nth-child(2) {
   right: 10px;
 }
 
+.detailed__icon__infriends {
+  position: absolute;
+  bottom: 10px;
+  right: 70px;
+  pointer-events: none;
+}
 .add__friend {
   background-color: rgba(69, 141, 235, 0.9);
   border: none;
   cursor: pointer;
   border-radius: 50%;
-}
-
-.detailed__icon__infriends {
-  pointer-events: none;
 }
 
 .delete__friend {
@@ -473,6 +476,7 @@ header h1 span:nth-child(2) {
   -webkit-box-shadow: 0px 0px 5px 10px rgba(14, 78, 161, 0.9);
   -moz-box-shadow: 0px 0px 5px 10px rgba(14, 78, 161, 0.9);
   box-shadow: 0px 0px 5px 10px rgba(14, 78, 161, 0.9);
+  z-index: 10;
 }
 
 .person__list {
@@ -696,6 +700,378 @@ footer {
   padding-top: 20px;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
+@media (max-width: 576px) {
+  * {
+    overflow: hidden;
+  }
+  header h1 {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    text-align: center;
+    border-bottom: solid 3px rgb(12, 44, 131);
+  }
+
+  header h1 span:nth-child(1) {
+    color: rgb(187, 15, 15);
+  }
+
+  header h1 span:nth-child(2) {
+    color: rgb(12, 44, 131);
+  }
+
+  #preloader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 55;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .loader {
+    color: #c0530b;
+    font-size: 30px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: 72px auto;
+    position: relative;
+    top: 30%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load6 0.5s infinite ease;
+    animation: load6 1.5s linear;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 15px auto;
+  }
+
+  .container:nth-child(2) {
+    align-items: center;
+  }
+
+  /*-------Filter--------*/
+  .filter__menu__hide {
+    position: fixed;
+    top: 0;
+    left: 15px;
+    width: 92%;
+    height: 260px;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translateY(-90%);
+  }
+
+  .filter__menu {
+    position: fixed;
+    top: 0;
+    left: 15px;
+    width: 92%;
+    height: 260px;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translateY(0%);
+  }
+
+  .filter__title {
+    display: none;
+  }
+  .filter__icon img {
+    width: 40px;
+    height: 40px;
+  }
+  .filter__icon {
+    width: 40px;
+    height: 40px;
+  }
+  .filter__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  .filter__btns {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .surname__filter {
+    display: block;
+    width: 120px;
+    height: 25px;
+    font-size: 14px;
+    margin: 0 auto;
+  }
+
+  .filter__wrap {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+  .entry__field {
+    width: 35%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 15px;
+  }
+  .age__filter__by__number {
+    display: block;
+    width: 90px;
+    height: 25px;
+    font-size: 14px;
+    margin: 0 auto 20px;
+  }
+  .age__label {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+  .filter__age {
+    width: 100%;
+  }
+  .filter__gender {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .filter__alphabet {
+    width: 100%;
+  }
+  .gender__label {
+    width: 40px;
+    height: 60px;
+    margin: 0px 15px 10px 10px;
+  }
+  .gender__label .filter__icon img {
+    width: 40px;
+    height: 60px;
+  }
+  .alphabet__label {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+
+  .reset__filter__btn {
+    top: 50px;
+    bottom: 50px;
+    left: 70%;
+    width: 80px;
+    height: 50px;
+    margin: 0px;
+  }
+  .hide__btn {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .filter__btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border: none;
+    background-color: rgb(65, 115, 223);
+  }
+
+  .filter__btn__text {
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 5px;
+  }
+  .filter__btn__text:nth-child(4) {
+    padding-right: 10px;
+  }
+
+  /*-----------Detailed Info-------------*/
+
+  .detailed__person__info {
+    width: 90%;
+    height: 200px;
+    margin: 40px 10px 30px 10px;
+  }
+
+  .detailed__photo {
+    width: 80px;
+    height: 100px;
+    margin: 5px 10px 20px 5px;
+    float: right;
+  }
+
+  .detailed__name {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .text__section {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+  .detailed__age {
+    order: 1;
+    display: block;
+    width: 100%;
+  }
+  .detailed__date {
+    display: block;
+    order: 2;
+    width: 100%;
+  }
+  .detailed__email {
+    order: 7;
+    display: block;
+  }
+  .detailed__gender {
+    display: block;
+    order: 3;
+    width: 100%;
+  }
+  .detailed__location {
+    order: 6;
+    display: block;
+    width: 100%;
+  }
+  .detailed__nation {
+    order: 4;
+    display: block;
+    width: 100%;
+  }
+  .detailed__phone__number {
+    display: block;
+    order: 5;
+    width: 100%;
+  }
+
+  /*----------------btns--------------*/
+  .btns__area {
+    top: 270px;
+    margin-left: 5px;
+    width: 92%;
+    height: 30px;
+  }
+
+  .select__btn {
+    background-color: rgb(236, 156, 8);
+    color: rgb(12, 44, 131);
+  }
+
+  .infriends__icon img {
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    width: 15px;
+    height: 15px;
+  }
+
+  /*------------Content------------*/
+  .app__content {
+    width: 92%;
+    height: 280px;
+    border-radius: 10px;
+    margin: 30px 20px 20px 15px;
+    padding: 10px;
+    overflow-y: auto;
+  }
+
+  .person__list {
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(auto-fit, 130px);
+  }
+
+  .person__item {
+    position: relative;
+    width: 90px;
+    height: 120px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(14, 78, 161, 0.9);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(14, 78, 161, 0.9);
+    box-shadow: 0px 0px 5px 5px rgba(14, 78, 161, 0.9);
+  }
+
+  .person__bg {
+    margin-bottom: 10px;
+  }
+
+  .person__name {
+    font-size: 10px;
+    font-weight: 500;
+    padding: 0px 5px;
+    margin-bottom: 15px;
+  }
+
+  .person__text__age {
+    bottom: 10px;
+    font-size: 8px;
+    font-weight: 400;
+  }
+
+  .person__text__gender {
+    font-size: 8px;
+    font-weight: 400;
+  }
+  .list__message {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    grid-column: 1/-1;
+    grid-row: 3/-1;
+  }
+
+  /*---------------Page---------------*/
+  .page__list {
+    position: relative;
+    margin: 0px auto;
+    display: block;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .page__number {
+    display: inline;
+    width: 100%;
+    height: 20px;
+    font-size: 16px;
+  }
+
+  .error__area {
+    width: 90vw;
+  }
+}

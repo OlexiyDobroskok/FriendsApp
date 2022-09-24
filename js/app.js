@@ -43,7 +43,7 @@ const citiesPhotos = [
   },
 ];
 const url =
-  "https://randomuser.me/api/?results=200&inc=gender,name,nat,dob,location,email,phone,picture&nat=us,ua,ch,gb";
+  "https://randomuser.me/api/?results=100&inc=gender,name,nat,dob,location,email,phone,picture&nat=us,ua,ch,gb";
 
 async function getData(url) {
   const responceData = await fetch(url);
@@ -397,7 +397,6 @@ function createPersonsList(persons) {
         inFriendsIcon.append(iconImg);
         personGender.after(inFriendsIcon);
       }
-
       return personItem;
     }
   );
