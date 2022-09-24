@@ -703,46 +703,806 @@ footer {
   z-index: 0;
 }
 
+@media (min-width: 992px) and (max-width: 1230px) {
+  /*-------Filter--------*/
+  .filter__menu__hide {
+    width: 30%;
+  }
+
+  .filter__menu {
+    width: 30%;
+  }
+
+  .gender__label .filter__icon img {
+    width: 60px;
+    height: 90px;
+  }
+  .gender__label {
+    width: 60px;
+    height: 90px;
+    margin: 0px 15px 10px 10px;
+  }
+
+  /*-----------Detailed Info-------------*/
+  .detailed__person__info {
+    width: 28%;
+  }
+
+  .detailed__photo {
+    display: block;
+    width: 120px;
+    height: 150px;
+  }
+
+  .detailed__name {
+    font-size: 16px;
+  }
+
+  .text__section {
+    font-size: 14px;
+  }
+
+  /*------------Content------------*/
+  .app__content {
+    width: 70%;
+    margin: 0px 20px 0px 10px;
+    overflow-y: auto;
+  }
+
+  .person__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .page__list {
+    position: relative;
+    margin: 0px auto;
+    display: block;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .page__number {
+    display: inline;
+    width: 100%;
+    height: 20px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  * {
+    overflow: hidden;
+  }
+  header h1 {
+    right: 75%;
+  }
+
+  .loader {
+    top: 23%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+  }
+
+  .container:nth-child(3) {
+    align-items: flex-end;
+  }
+
+  /*-------Filter--------*/
+  .filter__menu__hide {
+    position: fixed;
+    top: 0;
+    right: -41%;
+    width: 52%;
+    height: 260px;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translateY(-90%);
+  }
+
+  .filter__menu {
+    position: fixed;
+    top: 0;
+    right: -42%;
+    width: 51%;
+    height: 260px;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translateY(0%);
+  }
+
+  .filter__title {
+    display: none;
+  }
+  .filter__icon img {
+    width: 40px;
+    height: 40px;
+  }
+  .filter__icon {
+    width: 40px;
+    height: 40px;
+  }
+  .filter__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  .filter__btns {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .surname__filter {
+    display: block;
+    width: 120px;
+    height: 25px;
+    font-size: 14px;
+    margin: 0 auto;
+  }
+
+  .filter__wrap {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+  .entry__field {
+    width: 35%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .age__filter__by__number {
+    display: block;
+    width: 90px;
+    height: 25px;
+    font-size: 14px;
+    margin: 0 auto 20px;
+  }
+  .age__label {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+  .filter__age {
+    width: 100%;
+  }
+  .filter__gender {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .gender__label .filter__icon img {
+    width: 40px;
+    height: 60px;
+  }
+  .gender__label {
+    width: 40px;
+    height: 60px;
+    margin: 0px 15px 10px 10px;
+  }
+  .filter__alphabet {
+    width: 100%;
+  }
+
+  .alphabet__label {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+
+  .reset__filter__btn {
+    position: relative;
+    width: 80px;
+    height: 50px;
+    margin-bottom: 50px;
+  }
+  .hide__btn {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .filter__btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border: none;
+    background-color: rgb(65, 115, 223);
+  }
+
+  .filter__btn__text {
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 5px;
+  }
+  .filter__btn__text:nth-child(4) {
+    padding-right: 10px;
+  }
+
+  /*-----------Detailed Info-------------*/
+
+  .detailed__person__info {
+    width: 50%;
+    height: 200px;
+    margin: 40px 20px 30px 10px;
+  }
+
+  .detailed__photo {
+    width: 80px;
+    height: 100px;
+    margin: 5px 10px 20px 5px;
+    float: right;
+  }
+
+  .detailed__name {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .text__section {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+  .detailed__age {
+    order: 1;
+    display: block;
+    width: 100%;
+  }
+  .detailed__date {
+    display: block;
+    order: 2;
+    width: 100%;
+  }
+  .detailed__email {
+    order: 7;
+    display: block;
+  }
+  .detailed__gender {
+    display: block;
+    order: 3;
+    width: 100%;
+  }
+  .detailed__location {
+    order: 6;
+    display: block;
+    width: 100%;
+  }
+  .detailed__nation {
+    order: 4;
+    display: block;
+    width: 100%;
+  }
+  .detailed__phone__number {
+    display: block;
+    order: 5;
+    width: 100%;
+  }
+
+  /*----------------btns--------------*/
+  .btns__area {
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    left: 20px;
+    margin-left: 5px;
+    width: 40%;
+    height: 100px;
+  }
+  .my__friends__btn {
+    display: block;
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(12, 114, 100);
+  }
+
+  .all__persons__btn {
+    display: block;
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(12, 114, 100);
+  }
+
+  .select__btn {
+    background-color: rgb(236, 156, 8);
+    color: rgb(12, 44, 131);
+  }
+
+  .infriends__icon img {
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    width: 15px;
+    height: 15px;
+  }
+
+  /*------------Content------------*/
+  .app__content {
+    width: 95%;
+    height: 570px;
+    border-radius: 10px;
+    margin: 10px 20px 20px 15px;
+    padding: 10px;
+    overflow-y: none;
+  }
+
+  .person__list {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .person__item {
+    width: 110px;
+    height: 150px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(14, 78, 161, 0.9);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(14, 78, 161, 0.9);
+    box-shadow: 0px 0px 5px 5px rgba(14, 78, 161, 0.9);
+  }
+
+  .person__bg {
+    margin-bottom: 15px;
+  }
+
+  .person__name {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0px 5px;
+    margin-bottom: 15px;
+  }
+
+  .person__text__age {
+    bottom: 12px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .person__text__gender {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .list__message {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    grid-column: 1/-1;
+    grid-row: 3/-1;
+  }
+
+  /*---------------Page---------------*/
+  .page__list {
+    position: relative;
+    margin: 0px auto;
+    display: block;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .page__number {
+    display: inline;
+    width: 100%;
+    height: 20px;
+    font-size: 16px;
+  }
+
+  .error__area {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  * {
+    overflow: hidden;
+  }
+  header h1 {
+    right: 70%;
+    font-size: 28px;
+  }
+
+  .loader {
+    top: 30%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+  }
+
+  .container:nth-child(3) {
+    align-items: flex-end;
+  }
+
+  /*-------Filter--------*/
+  .filter__menu__hide {
+    position: fixed;
+    top: 0;
+    right: -30%;
+    width: 60%;
+    height: 260px;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translateY(-90%);
+  }
+
+  .filter__menu {
+    position: fixed;
+    top: 0;
+    right: -30%;
+    width: 61%;
+    height: 260px;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translateY(0%);
+  }
+
+  .filter__title {
+    display: none;
+  }
+  .filter__icon img {
+    width: 40px;
+    height: 40px;
+  }
+  .filter__icon {
+    width: 40px;
+    height: 40px;
+  }
+  .filter__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  .filter__btns {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .surname__filter {
+    display: block;
+    width: 120px;
+    height: 25px;
+    font-size: 14px;
+    margin: 0 auto;
+  }
+
+  .filter__wrap {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+  .entry__field {
+    width: 35%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .age__filter__by__number {
+    display: block;
+    width: 90px;
+    height: 25px;
+    font-size: 14px;
+    margin: 0 auto 20px;
+  }
+  .age__label {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+  .filter__age {
+    width: 100%;
+  }
+  .filter__gender {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .gender__label .filter__icon img {
+    width: 40px;
+    height: 60px;
+  }
+  .gender__label {
+    width: 40px;
+    height: 60px;
+    margin: 0px 15px 10px 10px;
+  }
+  .filter__alphabet {
+    width: 100%;
+  }
+
+  .alphabet__label {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+
+  .reset__filter__btn {
+    position: relative;
+    width: 80px;
+    height: 50px;
+    margin-bottom: 50px;
+  }
+  .hide__btn {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .filter__btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border: none;
+    background-color: rgb(65, 115, 223);
+  }
+
+  .filter__btn__text {
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 5px;
+  }
+  .filter__btn__text:nth-child(4) {
+    padding-right: 10px;
+  }
+
+  /*-----------Detailed Info-------------*/
+
+  .detailed__person__info {
+    width: 60%;
+    height: 200px;
+    margin: 40px 20px 30px 10px;
+  }
+
+  .detailed__photo {
+    width: 80px;
+    height: 100px;
+    margin: 5px 10px 20px 5px;
+    float: right;
+  }
+
+  .detailed__name {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .text__section {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+  .detailed__age {
+    order: 1;
+    display: block;
+    width: 100%;
+  }
+  .detailed__date {
+    display: block;
+    order: 2;
+    width: 100%;
+  }
+  .detailed__email {
+    order: 7;
+    display: block;
+  }
+  .detailed__gender {
+    display: block;
+    order: 3;
+    width: 100%;
+  }
+  .detailed__location {
+    order: 6;
+    display: block;
+    width: 100%;
+  }
+  .detailed__nation {
+    order: 4;
+    display: block;
+    width: 100%;
+  }
+  .detailed__phone__number {
+    display: block;
+    order: 5;
+    width: 100%;
+  }
+
+  /*----------------btns--------------*/
+  .btns__area {
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    left: 10px;
+    margin-left: 5px;
+    width: 30%;
+    height: 100px;
+  }
+  .my__friends__btn {
+    display: block;
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(12, 114, 100);
+  }
+
+  .all__persons__btn {
+    display: block;
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(12, 114, 100);
+  }
+
+  .select__btn {
+    background-color: rgb(236, 156, 8);
+    color: rgb(12, 44, 131);
+  }
+
+  .infriends__icon img {
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    width: 15px;
+    height: 15px;
+  }
+
+  /*------------Content------------*/
+  .app__content {
+    width: 95%;
+    height: 500px;
+    border-radius: 10px;
+    margin: 10px 20px 20px 15px;
+    padding: 10px;
+    overflow-y: auto;
+  }
+
+  .person__list {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .person__item {
+    width: 110px;
+    height: 140px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(14, 78, 161, 0.9);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(14, 78, 161, 0.9);
+    box-shadow: 0px 0px 5px 5px rgba(14, 78, 161, 0.9);
+  }
+  .person__item:nth-child(14) {
+    grid-column: 2/4;
+  }
+
+  .person__bg {
+    margin-bottom: 15px;
+  }
+
+  .person__name {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0px 5px;
+    margin-bottom: 15px;
+  }
+
+  .person__text__age {
+    bottom: 12px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .person__text__gender {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .list__message {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    grid-column: 1/-1;
+    grid-row: 3/-1;
+  }
+
+  /*---------------Page---------------*/
+  .page__list {
+    position: relative;
+    margin: 0px auto;
+    display: block;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .page__number {
+    display: inline;
+    width: 100%;
+    height: 20px;
+    font-size: 16px;
+  }
+
+  .error__area {
+    width: 90vw;
+  }
+}
+
 @media (max-width: 576px) {
   * {
     overflow: hidden;
   }
   header h1 {
     display: none;
-    position: absolute;
-    top: 0;
-    right: 20px;
-    text-align: center;
-    border-bottom: solid 3px rgb(12, 44, 131);
   }
-
-  header h1 span:nth-child(1) {
-    color: rgb(187, 15, 15);
-  }
-
-  header h1 span:nth-child(2) {
-    color: rgb(12, 44, 131);
-  }
-
   .loader {
-    color: #c0530b;
-    font-size: 30px;
-    text-indent: -9999em;
-    overflow: hidden;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    margin: 72px auto;
-    position: relative;
     top: 23%;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-animation: load6 0.5s infinite ease;
-    animation: load6 1.5s linear;
   }
 
   .container {
@@ -827,6 +1587,7 @@ footer {
     margin: 0;
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
     margin-bottom: 15px;
   }
   .age__filter__by__number {
@@ -851,18 +1612,19 @@ footer {
     justify-content: space-between;
     margin: 0 auto;
   }
-  .filter__alphabet {
-    width: 100%;
+  .gender__label .filter__icon img {
+    width: 40px;
+    height: 60px;
   }
   .gender__label {
     width: 40px;
     height: 60px;
     margin: 0px 15px 10px 10px;
   }
-  .gender__label .filter__icon img {
-    width: 40px;
-    height: 60px;
+  .filter__alphabet {
+    width: 100%;
   }
+
   .alphabet__label {
     display: flex;
     flex-direction: row;
@@ -872,12 +1634,10 @@ footer {
   }
 
   .reset__filter__btn {
-    top: 50px;
-    bottom: 50px;
-    left: 70%;
+    position: relative;
     width: 80px;
     height: 50px;
-    margin: 0px;
+    margin-bottom: 50px;
   }
   .hide__btn {
     opacity: 0;
@@ -1001,12 +1761,11 @@ footer {
   }
 
   .person__list {
-    grid-template-columns: repeat(3, 110px);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fit, 130px);
   }
 
   .person__item {
-    position: relative;
     width: 90px;
     height: 120px;
     margin: 10px 10px;
