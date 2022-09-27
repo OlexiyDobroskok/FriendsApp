@@ -211,7 +211,7 @@ function createDetailedPersonsInfo({ target }, persons) {
   if (filterMenu.classList.value === "filter__menu") {
     filterMenu.classList.remove("filter__menu");
     filterMenu.classList.add("filter__menu__hide");
-    changeFilterMenuBtnName();
+    changeSideBtnName();
   }
   if (detailedPersonInfo.classList.contains("hide__person__info")) {
     detailedPersonInfo.classList.remove("hide__person__info");
@@ -329,7 +329,7 @@ function updateVisualPageToDefaultSettings() {
   filterMenu.classList.remove("filter__menu__hide");
   filterMenu.classList.add("filter__menu");
   detailedPersonInfo.classList.add("hide__person__info");
-  changeFilterMenuBtnName();
+  changeSideBtnName();
 }
 
 function filterBtnsHandler({ target }, persons) {
@@ -339,7 +339,7 @@ function filterBtnsHandler({ target }, persons) {
   if (!!sideBtn) {
     filterMenu.classList.toggle("filter__menu__hide");
     filterMenu.classList.toggle("filter__menu");
-    changeFilterMenuBtnName();
+    changeSideBtnName();
   }
   if (!!resetBtn) resetForm(persons);
 }
@@ -542,7 +542,7 @@ function getValueInputField(className) {
   return inputField.value;
 }
 
-function changeFilterMenuBtnName() {
+function changeSideBtnName() {
   const hideFilterBtn = document.querySelector(".hide__filter__btn");
   const showFilterBtn = document.querySelector(".show__filter__btn");
   if (filterMenu.classList.value === "filter__menu") {
