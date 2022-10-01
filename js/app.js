@@ -575,8 +575,7 @@ function changeSideBtnName() {
   if (filterMenu.classList.value === "filter__menu") {
     showFilterBtn.classList.add("hide__btn");
     hideFilterBtn.classList.remove("hide__btn");
-  }
-  if (filterMenu.classList.value === "filter__menu__hide") {
+  } else {
     showFilterBtn.classList.remove("hide__btn");
     hideFilterBtn.classList.add("hide__btn");
   }
