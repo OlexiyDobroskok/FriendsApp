@@ -17,11 +17,16 @@
     </h1>
   </header>
   <aside id="filter__menu" class="filter__menu">
-    <h3 class="filter__title">Filter by</h3>
     <form class="filter__form">
       <section class="entry__field">
-        <input type="text" maxlength="12" class="surname__filter" placeholder="Enter Surname">
-        <input type="text" placeholder="Enter Age" maxlength="2" class="age__filter__by__number">
+        <h3 class="filter__title">Filter by</h3>
+        <input type="text" class="name__filter" placeholder="Enter Name">
+        <select name="filter__method" id="filter__method">
+          <option value="name">Strict: Name</option>
+          <option value="surname">Strict: Surname</option>
+          <option value="extended" selected>Extended: Firstname + Surname</option>
+        </select>
+        <input type="number" placeholder="Enter Age" class="age__filter__by__number">
         <button type="reset" class="reset__filter__btn">RESET</button>
       </section>
       <section class="filter__btns">
@@ -137,18 +142,16 @@
       <ul class="person__list"></ul>
     </main>
   </div>
-  <div class="error__wrap__hide">
-    <aside class="error__area">
-      <h4 class="error__title">Error</h4>
-      <p class="error__msg">
-        Remote server is not responding!Repeat the request?
-      </p>
-      <div class="btn__area">
-        <button class="error__btn" value="repeat">Repeat</button>
-        <button class="error__btn" value="cancel">Cancel</button>
-      </div>
-    </aside>
-  </div>
+  <dialog class="error">
+    <h4 class="error__title">Error</h4>
+    <p class="error__msg">
+      Remote server is not responding!Repeat the request?
+    </p>
+    <div class="btn__area">
+      <button class="error__btn" value="repeat">Repeat</button>
+      <button class="error__btn" value="cancel">Cancel</button>
+    </div>
+  </dialog>
   <footer>
     <p>&copy; by OlexiyDobroskok, 2022</p>
   </footer>
