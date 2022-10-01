@@ -391,7 +391,7 @@ header h1 span:nth-child(2) {
 .detailed__photo {
   display: block;
   width: 150px;
-  height: 180px;
+  height: 160px;
   margin: 10px auto 20px auto;
   border-radius: 10px;
   pointer-events: none;
@@ -705,7 +705,6 @@ footer {
   padding-top: 20px;
   justify-content: center;
   align-items: center;
-  z-index: 0;
 }
 
 @media (min-width: 992px) and (max-width: 1230px) {
@@ -736,7 +735,7 @@ footer {
   .detailed__photo {
     display: block;
     width: 120px;
-    height: 150px;
+    height: 130px;
   }
 
   .detailed__name {
@@ -988,7 +987,7 @@ footer {
 
   .detailed__photo {
     width: 80px;
-    height: 100px;
+    height: 90px;
     margin: 5px 10px 20px 5px;
     float: right;
   }
@@ -1388,7 +1387,7 @@ footer {
 
   .detailed__photo {
     width: 80px;
-    height: 100px;
+    height: 90px;
     margin: 5px 10px 20px 5px;
     float: right;
   }
@@ -1790,7 +1789,7 @@ footer {
 
   .detailed__photo {
     width: 80px;
-    height: 100px;
+    height: 90px;
     margin: 5px 10px 20px 5px;
     float: right;
   }
