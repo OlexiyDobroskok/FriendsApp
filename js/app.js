@@ -585,7 +585,6 @@ function changeSideBtnName() {
 function errorHandler({ target }) {
   let btn = target.closest("button");
   if (!btn) return;
-  console.log(btn);
   if (btn.value === "cancel") {
     errorWindow.close();
   } else {
