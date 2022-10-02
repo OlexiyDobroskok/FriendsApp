@@ -72,7 +72,6 @@ pageList.classList.add("page__list");
 personsList.after(pageList);
 
 const personsData = waitData();
-
 personsData.then(({ results: persons }) => {
   persons.forEach((person, personPosition) => {
     person.cityImg = shuffle(citiesPhotos)[0];
@@ -153,28 +152,24 @@ function createPersonsList(persons) {
           return "";
         }
       }
-      const personCard =
-        repeatId === undefined
-          ? `
-      <li id='${id}'class="person__item">
+      const personCard = `
+      <li id='${id}'class="person__item" ${
+        repeatId !== undefined ? ' data-friend="true"' : ""
+      }>
         <img src="${cityPhoto}" alt="" class="person__bg">
         <img src="${photo}" alt="" class="person__photo">
         <h2 class="person__name">${firstName} ${surName}</h2>
         <span class="person__text__age">${age}</span>
         <span class="person__text__gender">${gender}</span>
+        ${
+          repeatId !== undefined
+            ? `
+        <i class="infriends__icon">
+          <img src="./img/friends__ico/in__friends.png" alt="" class="icon__img__infriends">
+        </i>`
+            : ""
+        }
       </li>
-      `
-          : `
-      <li id="${id}" class="person__item" data-friend="true">
-         <img src="${cityPhoto}" alt="" class="person__bg" />
-         <img src="${photo}" alt="" class="person__photo" />
-         <h2 class="person__name">${firstName} ${surName}</h2>
-         <span class="person__text__age">${age}</span>
-         <span class="person__text__gender">${gender}</span>
-         <i class="infriends__icon"
-           ><img src="./img/friends__ico/in__friends.png" alt="" class="icon__img__infriends"
-         /></i>
-     </li>
       `;
       return personCard;
     }
@@ -184,20 +179,16 @@ function createPersonsList(persons) {
 function createPageList(persons) {
   const convertedPersonsData = convertPersonsData(persons);
   return convertedPersonsData.map((page, number) => {
-    const pageNumber =
-      pageValue == number
-        ? `<li class="page__number chosen__page" data-page-value="${number}">${
-            number + 1
-          }</li>`
-        : `<li class="page__number" data-page-value="${number}">${
-            number + 1
-          }</li>`;
+    const pageNumber = `
+    <li class="page__number"><a class="page__link${
+      pageValue == number ? " chosen__page" : ""
+    }" href="#" data-page-value="${number}">${number + 1}</a></li>`;
     return pageNumber;
   });
 }
 
 function showPage({ target }, persons) {
-  const selectedPage = target.closest("li");
+  const selectedPage = target.closest(".page__link");
   if (!selectedPage) return;
   pageValue = selectedPage.dataset.pageValue;
   showFilteredPersons(persons);

@@ -71,10 +71,10 @@ header h1 span:nth-child(2) {
   -ms-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-animation: load6 0.5s infinite ease;
-  animation: load6 1.5s linear;
+  animation: load 1.5s linear;
 }
 
-@-webkit-keyframes load6 {
+@-webkit-keyframes load {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -109,7 +109,7 @@ header h1 span:nth-child(2) {
       0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
 }
-@keyframes load6 {
+@keyframes load {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -162,9 +162,6 @@ header h1 span:nth-child(2) {
   justify-content: flex-start;
   align-items: flex-end;
   margin-top: 60px;
-}
-
-.container:nth-child(3) {
   align-items: center;
 }
 
@@ -578,30 +575,38 @@ header h1 span:nth-child(2) {
 /*---------------Page---------------*/
 .page__list {
   position: absolute;
-  bottom: 10px;
+  width: 100%;
+  bottom: 0px;
   left: 0;
   right: 0;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(65, 115, 223);
 }
 
-.page__number {
-  width: 10px;
-  height: 10px;
-  margin: 10px;
+.page__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 20px;
+  height: 35px;
+  margin: 10px 5px 5px;
   font-size: 18px;
   text-align: center;
   color: rgb(12, 44, 131);
+  text-decoration: none;
+}
+
+.chosen__page {
+  color: rgb(163, 57, 57);
+  text-decoration: underline;
 }
 
 .page__number:hover {
   cursor: pointer;
-}
-
-.chosen__page {
-  text-decoration: underline;
-  color: rgb(163, 57, 57);
 }
 
 .list__message {
@@ -747,6 +752,10 @@ footer {
   }
 
   /*------------Content------------*/
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   .app__content {
     width: 70%;
     margin: 0px 20px 0px 10px;
@@ -758,18 +767,13 @@ footer {
     grid-template-rows: repeat(5, 1fr);
   }
   .page__list {
-    position: relative;
-    margin: 0px auto;
-    display: block;
-    padding-top: 30px;
-    text-align: center;
+    position: sticky;
+    bottom: 0;
+    background-color: rgb(65, 115, 223);
   }
 
-  .page__number {
-    display: inline;
-    width: 100%;
-    height: 20px;
-    font-size: 18px;
+  .page__link {
+    margin: 5px 5px 5px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1101,11 +1105,11 @@ footer {
     height: 570px;
     border-radius: 10px;
     margin: 10px 20px 20px 15px;
-    padding: 10px;
     overflow-y: none;
   }
 
   .person__list {
+    margin-top: 10px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
@@ -1152,18 +1156,15 @@ footer {
 
   /*---------------Page---------------*/
   .page__list {
-    position: relative;
-    margin: 0px auto;
-    display: block;
-    padding-top: 30px;
-    text-align: center;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    background-color: rgb(65, 115, 223);
+    margin-top: 20px;
   }
 
-  .page__number {
-    display: inline;
-    width: 100%;
-    height: 20px;
-    font-size: 16px;
+  .page__link {
+    margin: 5px 5px 5px;
   }
 
   dialog {
@@ -1496,12 +1497,16 @@ footer {
   }
 
   /*------------Content------------*/
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   .app__content {
     width: 95%;
-    height: 500px;
+    height: 540px;
     border-radius: 10px;
     margin: 10px 20px 20px 15px;
-    padding: 10px;
+    padding-top: 10px;
     overflow-y: auto;
   }
 
@@ -1556,18 +1561,15 @@ footer {
 
   /*---------------Page---------------*/
   .page__list {
-    position: relative;
-    margin: 0px auto;
-    display: block;
-    padding-top: 30px;
-    text-align: center;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    background-color: rgb(65, 115, 223);
+    margin-top: 20px;
   }
 
-  .page__number {
-    display: inline;
-    width: 100%;
-    height: 20px;
-    font-size: 16px;
+  .page__link {
+    margin: 5px 5px 5px;
   }
 
   dialog {
@@ -1593,7 +1595,7 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    margin: 15px auto;
+    margin: 15px auto 0px;
   }
 
   .container:nth-child(2) {
@@ -1784,7 +1786,7 @@ footer {
   .detailed__person__info {
     width: 90%;
     height: 200px;
-    margin: 40px 10px 30px 10px;
+    margin: 40px auto 30px auto;
   }
 
   .detailed__photo {
@@ -1849,7 +1851,7 @@ footer {
   /*----------------btns--------------*/
   .btns__area {
     top: 270px;
-    margin-left: 5px;
+    left: 0%;
     width: 92%;
     height: 30px;
   }
@@ -1868,12 +1870,16 @@ footer {
   }
 
   /*------------Content------------*/
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   .app__content {
     width: 92%;
-    height: 280px;
+    height: 300px;
     border-radius: 10px;
-    margin: 30px 20px 20px 15px;
-    padding: 10px;
+    margin: 30px auto 10px;
+    padding-top: 5px;
     overflow-y: auto;
   }
 
@@ -1924,18 +1930,17 @@ footer {
 
   /*---------------Page---------------*/
   .page__list {
-    position: relative;
-    margin: 0px auto;
-    display: block;
-    padding-top: 30px;
-    text-align: center;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    background-color: rgb(65, 115, 223);
+    margin-top: 20px;
   }
 
-  .page__number {
-    display: inline;
-    width: 100%;
-    height: 20px;
-    font-size: 16px;
+  .page__link {
+    height: 15px;
+    font-size: 10px;
+    margin: 5px 5px 5px;
   }
 
   dialog {
@@ -1943,5 +1948,7 @@ footer {
   }
   footer {
     position: static;
+    padding-top: 10px;
+    height: 30px;
   }
 }
