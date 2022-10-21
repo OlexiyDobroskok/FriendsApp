@@ -5,8 +5,8 @@ import {
   updatePersonsData,
   convertPersonsData,
   changeSideBtnName,
+  closePreLoader,
 } from "./modules/Service.js";
-import { closePreLoader } from "./modules/Service.js";
 
 let persons = [];
 let friendsList = [];
