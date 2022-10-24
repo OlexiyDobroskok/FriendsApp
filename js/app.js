@@ -53,7 +53,7 @@ errorWindow.addEventListener("click", errorHandler);
 
 async function init() {
   const url =
-    "https://randomuser./api/?results=100&inc=gender,name,nat,dob,location,email,phone,picture&nat=us,ua,ch,gb";
+    "https://randomuser.me/api/?results=100&inc=gender,name,nat,dob,location,email,phone,picture&nat=us,ua,ch,gb";
   const { results } = await getData(url);
   persons = results;
   closePreLoader();
