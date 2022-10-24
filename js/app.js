@@ -53,7 +53,7 @@ errorWindow.addEventListener("click", errorHandler);
 
 async function init() {
   const url =
-    "https://randomuser.me/api/?results=100&inc=gender,name,nat,dob,location,email,phone,picture&nat=us,ua,ch,gb";
+    "https://randomuser.m/api/?results=100&inc=gender,name,nat,dob,location,email,phone,picture&nat=us,ua,ch,gb";
   const { results } = await getData(url);
   persons = results;
   closePreLoader();
@@ -63,7 +63,7 @@ async function init() {
 }
 
 function errorHandler({ target }) {
-  let btn = target.closest("button");
+  const btn = target.closest("button");
   if (!btn) return;
   if (btn.value === "cancel") {
     errorWindow.close();
