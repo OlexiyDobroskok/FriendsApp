@@ -4,7 +4,8 @@
   "description": "[DEMO](https://olexiydobroskok.github.io/FriendsApp/)",
   "main": "index.js",
   "scripts": {
-    "start": "lite-server"
+    "start": "lite-server",
+    "sass-w": "sass --watch ./src/styles/styles.scss ./dist/styles.css"
   },
   "author": "",
   "license": "ISC",
