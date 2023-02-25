@@ -1,0 +1,12 @@
+:root {
+  --bg-color-primary: #85dcba;
+}
+
+.page {
+  font-style: italic;
+}
+.page__body {
+  background-color: var(--bg-color-primary);
+}
+
+/*# sourceMappingURL=styles.css.map */
