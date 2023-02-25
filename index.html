@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -8,8 +8,49 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Friends</title>
-    <link rel="stylesheet" href="dist/index.css" />
+    <link rel="stylesheet" href="dist/styles.css" />
     <script src="./dist/index.js" type="module"></script>
   </head>
-  <body></body>
+  <body class="page__body">
+    <header class="header">
+      <nav class="nav-menu">
+        <ul class="nav-menu__list header__nav-menu-list">
+          <li class="nav-menu__item">
+            <a href="#" class="link nav-menu__link nav-menu__link--active"
+              >Explore</a
+            >
+          </li>
+          <li class="nav-menu__item">
+            <a href="#" class="link nav-menu__link">Matches</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="#" class="link nav-menu__link">Messages</a>
+          </li>
+          <li class="nav-menu__item">
+            <div class="user">
+              <label class="user__checkbox-label">
+                <input class="user__checkbox visually-hidden" type="checkbox" />
+                <svg class="user__icon" width="2rem" height="2rem">
+                  <use href="./src/assets/images/sprite.svg#user-icon"></use>
+                </svg>
+              </label>
+            </div>
+            <nav class="nav-menu header__user-menu">
+              <ul class="nav-menu__list header__user-menu-list">
+                <li class="nav-menu__item">
+                  <a href="#" class="link nav-menu__link">Profile</a>
+                </li>
+                <li class="nav-menu__item">
+                  <a href="#" class="link nav-menu__link">Notification</a>
+                </li>
+                <li class="nav-menu__item">
+                  <a href="#" class="link nav-menu__link">Log out</a>
+                </li>
+              </ul>
+            </nav>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>
